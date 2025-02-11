@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Dashboard - Giant workshop survey</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.gstatic.com" rel="preconnect">
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+        <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+
+        <!-- ======================================================= * Template Name:
+        NiceAdmin * Updated: Nov 17 2023 with Bootstrap v5.3.2 * Template URL:
+        https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ * Author:
+        BootstrapMade.com * License: https://bootstrapmade.com/license/
+        ======================================================== -->
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top d-flex align-items-center">
+
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/img/logo.png" alt="">
+                    <span class="d-none d-lg-block">May4s</span>
+                </a>
+                <i class="bi bi-list toggle-sidebar-btn"></i>
+            </div>
+            <!-- End Logo -->
+
+            <div class="search-bar">
+                <form class="search-form d-flex align-items-center" method="POST" action="#">
+                    <input
+                        type="text"
+                        name="query"
+                        placeholder="Search"
+                        title="Enter search keyword">
+                    <button type="submit" title="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- End Search Bar -->
+
+        </header>
+        <!-- End Header -->
+
+        <!-- ======= Sidebar ======= -->
+        <aside id="sidebar" class="sidebar">
+
+            <ul class="sidebar-nav" id="sidebar-nav">
+                <li class="nav-heading">Pages</li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="workshop1.html">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Workshop1</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="workshop2.html">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Workshop2</span>
+                    </a>
+                </li>
+                <li class="nav-item collapsed">
+                    <a class="nav-link collapsed" href="workshop3.html">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Workshop3</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="workshop4.html">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Workshop4</span>
+                    </a>
+                </li>
+                <!-- End Dashboard Nav -->
+
+            </ul>
+
+        </aside>
+        <!-- End Sidebar-->
+
+        <main id="main" class="main">
+
+            <div class="pagetitle">
+                <h1>Number of people who filled out the questionnaire:1</h1>
+
+            </div>
+            <!-- End Page Title -->
+
+            <p>As of February 11, 2025.</p>
+
+            <section class="section">
+                <div class="row">
+                    
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Compared to the current system, the new system's operation process is：</h5>
+
+                                <!-- Pie Chart -->
+                                <div id="pieChart"></div>
+
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", () => {
+                                        new ApexCharts(document.querySelector("#pieChart"), {
+                                            series: [
+                                                0, 100
+                                            ],
+                                            chart: {
+                                                height: 350,
+                                                type: 'pie',
+                                                toolbar: {
+                                                    show: false
+                                                }
+                                            },
+                                            labels: ['More Intuitive', 'Similar', 'More Complex']
+                                        }).render();
+                                    });
+                                </script>
+                                <!-- End Pie Chart -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Is the layout of the new system clear and easy to understand?</h5>
+
+                                <!-- Pie Chart -->
+                                <div id="pieChart1"></div>
+
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", () => {
+                                        new ApexCharts(document.querySelector("#pieChart1"), {
+                                            series: [
+                                                0, 100
+                                            ],
+                                            chart: {
+                                                height: 350,
+                                                type: 'pie',
+                                                toolbar: {
+                                                    show: false
+                                                }
+                                            },
+                                            labels: ['Very clear', 'Acceptable', 'Not very clear', 'Not clear at all']
+                                        }).render();
+                                    });
+                                </script>
+                                <!-- End Pie Chart -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Are the function buttons easy to locate?</h5>
+
+                                <!-- Pie Chart -->
+                                <div id="pieChart2"></div>
+
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", () => {
+                                        new ApexCharts(document.querySelector("#pieChart2"), {
+                                            series: [
+                                                0, 100
+                                            ],
+                                            chart: {
+                                                height: 350,
+                                                type: 'pie',
+                                                toolbar: {
+                                                    show: false
+                                                }
+                                            },
+                                            labels: ['Very easy', 'Normal', 'Not very easy', 'Very diffcult']
+                                        }).render();
+                                    });
+                                </script>
+                                <!-- End Pie Chart -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6"> <div class="card"> <div class="card-body"> <h5
+                    class="card-title">Donut Chart</h5> <div id="donutChart"></div> <script>
+                    document.addEventListener("DOMContentLoaded", () => { new
+                    ApexCharts(document.querySelector("#donutChart"), { series: [ 44, 55, 13, 43, 22
+                    ], chart: { height: 350, type: 'donut', toolbar: { show: true } }, labels:
+                    ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'] }).render(); }); </script>
+                    </div> </div> </div> -->
+
+                </div>
+            </section>
+            <section class="section dashboard">
+                <!-- News & Updates Traffic -->
+                <div class="card">
+
+                    <div class="card-body pb-0">
+                        <h5 class="card-title">User's Suggestions<span>| Giant</span></h5>
+                        <div class="news">
+                            <div class="post-item clearfix">
+                                <img src="assets/img/suggestions.webp" alt="">
+                                <h4>
+                                    <a href="#">Improving Service Parts Accessibility and Documentation Management</a>
+                                </h4>
+                                <p>In the new system we need two things: it must be easier for dealers to locate service parts (and easier for us to maintain our parts listings), and we need a better page for making service documents accessible to dealers.</p>
+                            </div>
+
+                        </div>
+                        <div class="news">
+                          <div class="post-item clearfix">
+                              <img src="assets/img/suggestions.webp" alt="">
+                              <h4>
+                                  <a href="#">SKU Grouping and Ordering Functionality</a>
+                              </h4>
+                              <p>This may not be something for your team, but we need the ability the group SKUs for ordering (bundle SKUs, parent-child relationships, alternate SKU function).</p>
+                          </div>
+
+                      </div>
+                        <!-- End sidebar recent posts-->
+                    </div>
+                </div>
+                <!-- End News & Updates -->
+            </section>
+            <section class="section dashboard">
+                <!-- News & Updates Traffic -->
+                <div class="card">
+
+                    <div class="card-body pb-0">
+                        <h5 class="card-title">Reply and Future actions<span>| May4s</span></h5>
+                        <div class="news">
+                            <div class="post-item clearfix">
+                                <img src="assets/img/actions.jpg" alt="">
+                                <h4>
+                                    <a href="#">Optimize Warranty Functionality</a>
+                                </h4>
+                                <p>For both service parts accessibility and documentation management and SKU grouping & ordering functionality, we acknowledge that these features will require additional design and discussion. Given the complexity of handling parts and items, we want to ensure the best possible approach.
+                                  In Phase 1, our primary focus is on successfully migrating the existing functionalities to the new system. Any enhancements or optimizations, including these requests, will be reviewed and discussed further in Phase 2 to ensure a well-planned implementation.</p>
+                            </div>
+                        </div>
+                        <!-- End sidebar recent posts-->
+                    </div>
+                </div>
+                <!-- End News & Updates -->
+            </section>
+
+        </main>
+        <!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                &copy; Copyright
+                <strong>
+                    <span>may4s.com.tw</span></strong>. All Rights Reserved
+            </div>
+
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/chart.js/chart.umd.js"></script>
+        <script src="assets/vendor/echarts/echarts.min.js"></script>
+        <script src="assets/vendor/quill/quill.min.js"></script>
+        <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+        <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>
